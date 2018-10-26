@@ -23,7 +23,7 @@
           <upload v-if="upload" v-show="!userDada.avatar" @getimgs="getimgUrl"/>
           <el-input v-if="!upload"
                     class="itemII"
-                    v-model="userDada.avatar"
+                    v-model="avatar"
                     style="width: 66%;"
           ></el-input>
           <div class="cancleImg"
@@ -122,7 +122,8 @@
             value: '预备党员',
             label: '预备党员'
           },
-        ]
+        ],
+        avatar: ''
       }
     },
     methods: {
@@ -136,9 +137,13 @@
       },
       sureAddS() {
         let userData = this.userDada
+
+        if (this.avatar && !userData.avatar) {
+          userData.avatar = this.avatar
+        }
         if (userData.idCard && userData.password) {
           this.$axios.post('/adduser', userData).then(res => {
-            console.log(res)
+            // console.log(res)
             if (res.data.code == 200) {
               this.$message.success(res.data.msg)
               this.userDada = {
