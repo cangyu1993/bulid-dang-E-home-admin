@@ -9,6 +9,7 @@ const components = {
   home: () => import('@/views/home'),
   userlist: () => import('@/views/userlist'),
   adduser: () => import('@/views/adduser'),
+  addnews: () => import('@/views/addnews'),
 }
 
 
@@ -34,6 +35,11 @@ export default new Router({
           path: 'adduser',
           name: 'adduser',
           component: components.adduser,
+        },
+        {
+          path: 'addnews',
+          name: 'addnews',
+          component: components.addnews,
         },
       ]
     }
