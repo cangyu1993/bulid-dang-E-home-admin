@@ -12,7 +12,8 @@
   export default {
     data(){
       return{
-        token:''
+        token:'',
+        isShow:true
       }
     },
     methods:{
