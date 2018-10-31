@@ -22,6 +22,7 @@
             <i class="el-icon-menu"></i>
             <span>新闻管理</span>
           </template>
+            <el-menu-item index="/home/newsCategory">新闻分类</el-menu-item>
             <el-menu-item index="/home/addnews">添加新闻</el-menu-item>
             <el-menu-item index="/home/newslist">新闻列表</el-menu-item>
             <el-menu-item index="/home/newsmaster">新闻管理</el-menu-item>

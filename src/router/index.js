@@ -10,6 +10,7 @@ const components = {
   userlist: () => import('@/views/userlist'),
   adduser: () => import('@/views/adduser'),
   addnews: () => import('@/views/addnews'),
+  newsCategory: () => import('@/views/newsCategory'),
 }
 
 
@@ -40,6 +41,11 @@ export default new Router({
           path: 'addnews',
           name: 'addnews',
           component: components.addnews,
+        },
+        {
+          path: 'newsCategory',
+          name: 'newsCategory',
+          component: components.newsCategory,
         },
       ]
     }
